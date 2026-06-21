@@ -1,0 +1,129 @@
+{
+  "seed": 20260621,
+  "params": {
+    "u": 1.0,
+    "delta": 0.05,
+    "rho": 0.05
+  },
+  "reset_tax": {
+    "regimes": {
+      "high-reset democracy": {
+        "lam": 0.25,
+        "chi": 0.8,
+        "reset_tax": 0.2,
+        "eff_decay": 0.25,
+        "kstar": 4.0
+      },
+      "low-reset democracy": {
+        "lam": 0.25,
+        "chi": 0.1,
+        "reset_tax": 0.025,
+        "eff_decay": 0.07500000000000001,
+        "kstar": 13.333333333333332
+      },
+      "autocracy": {
+        "lam": 0.05,
+        "chi": 0.1,
+        "reset_tax": 0.005000000000000001,
+        "eff_decay": 0.05500000000000001,
+        "kstar": 18.18181818181818
+      }
+    },
+    "ratio_high": 0.22000000000000003,
+    "ratio_low": 0.7333333333333334,
+    "deficit_high": 4.545454545454545,
+    "deficit_low": 1.3636363636363635,
+    "gap_removed": 0.8974358974358975,
+    "reset_tax_high": 0.2,
+    "reset_tax_low": 0.025,
+    "reset_tax_auto": 0.005000000000000001,
+    "cv_high": 0.6860746812108517,
+    "cv_low": 0.13075771323878613,
+    "mc": {
+      "high-reset democracy": {
+        "mean": 4.015349403306527,
+        "sd": 2.7548295618237093,
+        "cv": 0.6860746812108517,
+        "analytic": 4.0
+      },
+      "low-reset democracy": {
+        "mean": 13.33095972208375,
+        "sd": 1.743125808538035,
+        "cv": 0.13075771323878613,
+        "analytic": 13.333333333333332
+      },
+      "autocracy": {
+        "mean": 18.17898274704718,
+        "sd": 1.225736836903685,
+        "cv": 0.06742604104747181,
+        "analytic": 18.18181818181818
+      }
+    },
+    "r_ratio_high": 0.22,
+    "r_ratio_low": 0.73,
+    "r_deficit_high": 4.5,
+    "r_deficit_low": 1.36,
+    "r_gap_removed_pct": 90,
+    "r_cv_high": 0.69,
+    "r_cv_low": 0.13
+  },
+  "horizon": {
+    "benefit_cost": 4.0,
+    "fixed_tau": 15.0,
+    "detail": {
+      "high-reset democracy": {
+        "hazard": 0.25,
+        "tau_star": 5.545177444479562,
+        "req_multiple_15yr": 42.52108200006278
+      },
+      "low-reset democracy": {
+        "hazard": 0.07500000000000001,
+        "tau_star": 18.48392481493187,
+        "req_multiple_15yr": 3.080216848918032
+      },
+      "autocracy": {
+        "hazard": 0.05500000000000001,
+        "tau_star": 25.205352020361644,
+        "req_multiple_15yr": 2.281880765329304
+      }
+    },
+    "tau_high": 5.545177444479562,
+    "tau_low": 18.48392481493187,
+    "tau_auto": 25.205352020361644,
+    "horizon_gain": 3.3333333333333326,
+    "req_mult_high": 42.52108200006278,
+    "req_mult_low": 3.080216848918032,
+    "req_mult_auto": 2.281880765329304,
+    "r_tau_high": 5.5,
+    "r_tau_low": 18.5,
+    "r_tau_auto": 25.2,
+    "r_horizon_gain": 3.3,
+    "r_req_mult_high": 42.5,
+    "r_req_mult_low": 3.1,
+    "r_req_mult_auto": 2.28
+  },
+  "drift": {
+    "phi": 0.35,
+    "crit_ratio": 1.8571428571428574,
+    "median_ratio": 3.0,
+    "breakdown_frac": 0.832925,
+    "breakdown_protected": 0.335275,
+    "breakdown_early": 0.154075,
+    "r_crit_ratio": 1.86,
+    "r_breakdown_pct": 83,
+    "r_breakdown_protected_pct": 34,
+    "r_breakdown_early_pct": 15
+  },
+  "two_clocks": {
+    "target_decay": 0.07500000000000001,
+    "lam_needed": 0.03125000000000001,
+    "tenure_needed": 31.999999999999993,
+    "autocrat_tenure": 20.0,
+    "dem_tenure": 4.0,
+    "cap_ratio": 0.7333333333333334,
+    "removability_gain": 5.0,
+    "r_tenure_needed": 32,
+    "r_cap_ratio": 0.73,
+    "r_removability_gain": 5
+  }
+}

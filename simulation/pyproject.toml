@@ -1,0 +1,9 @@
+[project]
+name = "disposable-rulers-sim"
+version = "0.1.0"
+description = "The reset tax: stochastic capital accumulation with turnover-induced resets for Disposable Rulers, Persistent Institutions"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]
