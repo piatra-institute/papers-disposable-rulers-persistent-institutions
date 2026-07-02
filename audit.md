@@ -18,3 +18,13 @@ Verification:
   - claims: 23 prose decimals, 0 without a matching results.json value.
   - build: 10 pages, 0 missing-character warnings.
   - check => PASS
+
+---
+
+## 2026-07-02 — reform pass (borrowed-authority fix + de-template)
+
+Corpus reform. The core PDMP identity K* = u/(δ+λχ) and the reset-tax argument are sound. Two defects.
+
+- paper/PAPER.md §5: fixed the borrowed-authority juxtaposition. The 83% breakdown share is an output of a stipulated "destruction a median 3x faster than repair" input; placing it beside the real empirical one-in-five (~80%) non-recovery rate let the made-up number borrow the empirical statistic's authority, implying the model reproduces the rate. Rewrote to state plainly that the 83% is an output of a chosen asymmetry, that a different input would move it, that its nearness to the empirical four-in-five is a coincidence of the chosen input rather than a derivation, and that only the direction (destroy-faster-than-repair drives most episodes to breakdown) is claimed.
+- paper/PAPER.md §8: retitled "What the Model Will Not Tell You" -> "Continuity Off the Body" (disposable-rulers was on the templated-closer census list), taking the title from the section's substantive thesis restatement; the honest limits and the closing argument are unchanged.
+- Verify: voice 0 errors; refs 19/19, 0 missing/0 unused; claims 23/0 unmatched; check => PASS; synced.
