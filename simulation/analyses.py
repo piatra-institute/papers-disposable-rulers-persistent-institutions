@@ -29,6 +29,8 @@ analytic mean is reproducible to the last digit.
 """
 from __future__ import annotations
 
+import math
+
 import numpy as np
 
 SEED = 20260621
@@ -106,7 +108,8 @@ def reset_tax(rng: np.random.Generator) -> dict:
         term = _simulate_pdmp(r["lam"], r["chi"], n_paths=20000, horizon=400.0,
                               rng=rng)
         mc[n] = dict(mean=float(term.mean()), sd=float(term.std()),
-                     cv=float(term.std() / term.mean()), analytic=ks[n])
+                     cv=float(term.std() / term.mean()), analytic=ks[n],
+                     rel_err_mean=float(abs(term.mean() - ks[n]) / ks[n]))
 
     return dict(
         regimes={n: dict(lam=r["lam"], chi=r["chi"], reset_tax=r["lam"] * r["chi"],
@@ -209,7 +212,16 @@ def drift(rng: np.random.Generator) -> dict:
     bf_protected = bf(1.5, phi)             # halve the asymmetry (repair twice as fast)
     bf_early = bf(median_ratio, 1.0 / 6)    # resist early: capture share -> 1/6
 
+    # Closed form: with ln(ratio) ~ N(ln med, 0.5^2), breakdown occurs iff
+    # ratio > (1-phi)/phi, so the share is 1 - Phi((ln crit - ln med)/0.5).
+    def bf_exact(med, ph):
+        z = (np.log((1 - ph) / ph) - np.log(med)) / 0.5
+        return float(0.5 * math.erfc(z / math.sqrt(2.0)))
+
     return dict(
+        breakdown_frac_exact=bf_exact(median_ratio, phi),
+        breakdown_protected_exact=bf_exact(1.5, phi),
+        breakdown_early_exact=bf_exact(median_ratio, 1.0 / 6),
         phi=phi, crit_ratio=crit_ratio, median_ratio=median_ratio,
         breakdown_frac=breakdown_frac,
         breakdown_protected=bf_protected, breakdown_early=bf_early,

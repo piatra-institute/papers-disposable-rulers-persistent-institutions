@@ -48,6 +48,20 @@ def main() -> None:
     print(f"  breakdown share  baseline              : {100*d['breakdown_frac']:.0f}%")
     print(f"  breakdown share  faster repair / early : "
           f"{100*d['breakdown_protected']:.0f}% / {100*d['breakdown_early']:.0f}%")
+    checks = {
+        "breakdown_mc_matches_closed_form": all(
+            abs(d[k] - d[k + "_exact"]) < 0.01
+            for k in ("breakdown_frac", "breakdown_protected", "breakdown_early")),
+        "mc_mean_within_1pct_of_analytic": all(
+            v["rel_err_mean"] < 0.01 for v in rt["mc"].values()),
+        "horizon_gain_is_hazard_ratio": abs(
+            h["horizon_gain"] - h["detail"]["high-reset democracy"]["hazard"]
+            / h["detail"]["low-reset democracy"]["hazard"]) < 1e-12,
+        "tenure_route_is_32_years": abs(tc["tenure_needed"] - 32.0) < 1e-9,
+    }
+    for k, v in checks.items():
+        print(f"  check {k:<38}: {'PASS' if v else 'FAIL'}")
+    assert all(checks.values()), checks
     print("TWO CLOCKS")
     print(f"  tenure route needs leaders kept        : {tc['tenure_needed']:.0f} years")
     print(f"  reset route: capacity vs autocracy     : {tc['cap_ratio']:.2f}")

@@ -27,7 +27,7 @@ def plot_reset_tax(results: dict, path: str) -> None:
                      textcoords="offset points", xytext=(8, 6), fontsize=8.5, color=col)
     ax1.set_xlabel("reset severity  chi  (fraction of capacity lost per turnover)")
     ax1.set_ylabel("long-run strategic stock  K*")
-    ax1.set_title("Same elections, same removability: the stock is set by chi", fontsize=10)
+    ax1.set_title("Long-run capacity K* against reset severity chi (lambda = 0.25)", fontsize=10)
     ax1.grid(alpha=0.25)
 
     # Panel B: the (lambda, chi) plane; iso-capacity hyperbolae lambda*chi=const;
@@ -47,15 +47,15 @@ def plot_reset_tax(results: dict, path: str) -> None:
     ax2.annotate("", xy=(tc["lam_needed"], DEM_HIGH["chi"]),
                  xytext=(DEM_HIGH["lam"], DEM_HIGH["chi"]),
                  arrowprops=dict(arrowstyle="->", color="#8e44ad", lw=2))
-    ax2.text(DEM_LOW["lam"] + 0.005, DEM_LOW["chi"] - 0.07, "reset route\n(keep leaders\ndisposable)",
+    ax2.text(DEM_LOW["lam"] + 0.005, DEM_LOW["chi"] - 0.07, "lower chi\n(lambda fixed)",
              fontsize=8, color="#27ae60")
     ax2.text(tc["lam_needed"] - 0.005, DEM_HIGH["chi"] - 0.16,
-             f"tenure route\n(entrench:\n{tc['r_tenure_needed']}-yr leaders)",
+             f"lower lambda\n(chi fixed:\n{tc['r_tenure_needed']}-yr tenure)",
              fontsize=8, color="#8e44ad", ha="left")
     ax2.set_xlabel("leader turnover  lambda  (per year)")
     ax2.set_ylabel("reset severity  chi")
     ax2.set_ylim(0, 1.02)
-    ax2.set_title("Two routes to continuity", fontsize=10)
+    ax2.set_title("Iso-reset-tax curves in the (lambda, chi) plane", fontsize=10)
     ax2.legend(fontsize=7.5, loc="upper right")
     ax2.grid(alpha=0.25)
 
@@ -80,7 +80,7 @@ def plot_horizon(results: dict, path: str) -> None:
                      textcoords="offset points", xytext=(8, 2), fontsize=8.5, color=col)
     ax1.set_xlabel("reform hazard  rho + lambda*chi")
     ax1.set_ylabel("longest financeable horizon  tau*  (years)")
-    ax1.set_title("How far ahead a regime can see (benefit/cost = 4)", fontsize=10)
+    ax1.set_title("Longest financeable reform horizon (benefit/cost = 4)", fontsize=10)
     ax1.grid(alpha=0.25)
 
     # Panel B: benefit multiple a 15-year reform must clear to survive.
@@ -93,7 +93,7 @@ def plot_horizon(results: dict, path: str) -> None:
         ax2.annotate(f"{v:.1f}x", (b.get_x() + b.get_width() / 2, v),
                      textcoords="offset points", xytext=(0, 3), ha="center", fontsize=9)
     ax2.set_ylabel("benefit/cost a 15-year reform must exceed")
-    ax2.set_title("A 15-year mission: thinkable only at low reset", fontsize=10)
+    ax2.set_title("Benefit/cost ratio required for a 15-year reform", fontsize=10)
     ax2.grid(alpha=0.25, axis="y")
 
     fig.tight_layout()
@@ -116,14 +116,14 @@ def plot_drift(results: dict, path: str) -> None:
                 color="#e67e22", s=55, zorder=5)
     ax1.set_xlabel("destroy / build ratio  d_A / r_D")
     ax1.set_ylabel("net drift of institutional integrity")
-    ax1.set_title("Below the line, integrity drifts to breakdown", fontsize=10)
+    ax1.set_title("Net integrity drift against destroy/build ratio", fontsize=10)
     ax1.legend(fontsize=8)
     ax1.grid(alpha=0.25)
 
     # Panel B: breakdown share and the two levers.
     labs = ["baseline\n(d/b~3,\nphi=0.35)", "faster repair\n(d/b~1.5)", "early resist\n(phi=1/6)"]
-    vals = [100 * d["breakdown_frac"], 100 * d["breakdown_protected"],
-            100 * d["breakdown_early"]]
+    vals = [100 * d["breakdown_frac_exact"], 100 * d["breakdown_protected_exact"],
+            100 * d["breakdown_early_exact"]]
     cols = ["#c0392b", "#27ae60", "#27ae60"]
     bars = ax2.bar(labs, vals, color=cols)
     for b, v in zip(bars, vals):
@@ -134,7 +134,7 @@ def plot_drift(results: dict, path: str) -> None:
              color="#7f8c8d", ha="right")
     ax2.set_ylabel("share of capture episodes reaching breakdown (%)")
     ax2.set_ylim(0, 100)
-    ax2.set_title("The same asymmetry, two ways to fix it", fontsize=10)
+    ax2.set_title("Share of capture episodes reaching breakdown", fontsize=10)
     ax2.grid(alpha=0.25, axis="y")
 
     fig.tight_layout()

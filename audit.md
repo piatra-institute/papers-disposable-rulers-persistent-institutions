@@ -3,6 +3,19 @@
 Dated log of editorial passes and verification runs. Newest first.
 See the workspace docs (run `papers docs`): writing-pipeline.md §7 and refresh-pipeline.md.
 
+## 2026-09-23 — prose revision
+
+Prose rewritten against the house standards. Headings: 1. Introduction; 2. Model; 3. Results (3.1 Long-run capacity and volatility; 3.2 Financeable reform horizon; 3.3 Drift of institutional integrity under alternation; 3.4 Tenure and reset as routes to continuity); 4. Institutional instruments; 5. Limitations; 6. Conclusion; Reproducibility (new). Tics: "rather than" 8 -> 0, inline ", not X" 5 -> 0, negate-pivots 2 -> 0, "not X but Y" 3 -> 0, "this/the paper" 3 -> 0, "merely/simply" 6 -> 0. Reference to "the seed's own worked example" removed.
+
+Corrections found during the pass:
+  - Horizon gain from cutting chi: "by a factor of 3.4" -> 3.3 (tau_low/tau_high = 0.25/0.075 = 3.33; results.json r_horizon_gain 3.3).
+  - Breakdown share with halved asymmetry: 34 -> 33 percent. The shares were Monte Carlo estimates of a probability with a closed form (ln ratio ~ N(ln median, 0.5^2), breakdown iff ratio > (1-phi)/phi): 83.1 / 33.5 / 15.3 percent against Monte Carlo 83.3 / 33.5 / 15.4; 33.46 rounds to 33. New fields drift.breakdown_{frac,protected,early}_exact; invariant breakdown_mc_matches_closed_form. Figure bars now use the closed form.
+  - "confirms the analytic mean to three significant figures" was false for the high-reset regime (4.015 vs 4.000); now "within 0.4 percent". New field mc.*.rel_err_mean; invariant mc_mean_within_1pct_of_analytic.
+  - The drift study was described as "integrating each [episode] to the absorbing floor"; the code classifies episodes by the sign of their net drift, and the text now says so.
+  - In-text citation OSCE (1994) had no bibliography entry; added the Code of Conduct on Politico-Military Aspects of Security (Budapest, 1994).
+Grid audit: no grid thresholds; the 32-year tenure is a closed-form inversion (exact), tau* and required multiples are closed forms. New invariants horizon_gain_is_hazard_ratio and tenure_route_is_32_years; all pass.
+Figure titles replaced with descriptive ones.
+
 ## 2026-06-21 — Initial implementation from seed chat
 Scope: full paper built from `chats/chat.md` (a four-turn ChatGPT deep-research thread on countering entrenched autocrats, with a large menu of candidate mathematics) through the PIATRA pipeline.
 Decision: ships a simulation in a frame the corpus has not used — a piecewise-deterministic Markov process (stochastic capital accumulation with Poisson jump resets). The seed's own recommendation, an attack-graph Monte-Carlo simulator with multi-key gates / common-mode capture / minimum cut, was DECLINED because it rhymes structurally with age-of-impunity (weakest-link chain + adversarial capture). Taking the seed's analytic core instead keeps the set from sounding like one instrument and yields a decomposition-and-lever result rather than another threshold / negative-identification.

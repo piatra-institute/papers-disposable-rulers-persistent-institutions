@@ -1,14 +1,33 @@
 slug: disposable-rulers-persistent-institutions
 web_slug: disposable-rulers-persistent-institutions
-title: "Disposable Rulers, Persistent Institutions: The Reset Tax and the Continuity a Democracy Can Buy Without a Strongman"
-header: "Disposable Rulers, Persistent Institutions"
-created: "2026-06"        # inception month (drives YYYY/MM archive path)
-date: "June 2026"             # publication month, e.g. "May 2026" (shown on web)
+title: 'Disposable Rulers, Persistent Institutions: The Reset Tax and the Continuity a Democracy Can Buy
+  Without a Strongman'
+header: Disposable Rulers, Persistent Institutions
+created: 2026-06
+date: June 2026
 paper_dir: paper
 has_simulation: true
-claims_target: results.json   # results.json | claim-ledger | none
+claims_target: results.json
 repo: git@github.com:piatra-institute/papers-disposable-rulers-persistent-institutions.git
 github: https://github.com/piatra-institute/papers-disposable-rulers-persistent-institutions
-status: published             # draft | built | published
-abstract: |-
-  A democracy and a dictatorship are not racing on the same clock. A new prime minister inherits a damaged system, needs years for a reform to mature, and is often removed before any of it shows, while an entrenched ruler holds position through fear and accumulates across decades. The intuitive fix, a strong leader who stays long enough to finish the job, is the wrong one, because it builds the vehicle the next illiberal government will drive. This paper prices the right one. It treats a democracy's strategic capacity, the expertise and institutional memory and half-built reforms that let a state act on a long horizon, as a stock that accumulates continuously and is knocked down at each change of government, a piecewise-deterministic Markov process with a closed-form long-run mean, K* = u / (delta + lambda·chi). The disadvantage the model isolates is not the turnover rate lambda but the product lambda·chi, turnover multiplied by the fraction chi of capacity lost per turnover, a quantity the paper calls the reset tax. Four results follow from the one process. At fixed democratic turnover, cutting reset severity from chi = 0.8 to chi = 0.1 lifts a democracy from 0.22 to 0.73 of an autocracy's long-run capacity, closing about 90 percent of the excess gap and removing most of its volatility, with no change to how often leaders are replaced. The same cut more than triples the reform horizon a government can finance, from 5.5 to 18.5 years, so a 15-year mission that would need a 42.5-fold payoff to survive a high-reset democracy needs only a 3.1-fold payoff under a low-reset one. Because institutions build slowly through coordinated entry and break fast through decentralized exit, electoral alternation is not self-correcting: when destruction outpaces repair, even perfect alternation drifts to breakdown, a model echo of the finding that four in five democracies that begin to autocratize do not recover, and the two cures, faster repair and earlier resistance, are both ways of lowering the reset tax. And to match an autocrat's continuity by entrenchment a democracy would have to keep its leaders for 32 years, longer than the dictator it fears, whereas the reset route keeps 4-year leaders and still buys 73 percent of autocratic continuity at 5 times the removability. The construct prices an incentive structure; it measures no country, it predicts no collapse, and it holds throughout that leaders must stay genuinely removable. Continuity belongs in the architecture of the state, not in the body of a ruler. Ships a runnable simulation whose output carries every modelled number.
+status: published
+abstract: 'Democracies and entrenched autocracies accumulate state capacity on different clocks: a democratic
+  government is often removed before a long reform matures, while an autocrat holds office for decades.
+  Extending a good leader''s tenure answers the asymmetry by building the apparatus that the next illiberal
+  government inherits. We model a state''s strategic capacity (expertise, institutional memory, live alliances
+  and unfinished reforms) as a stock that accumulates continuously and loses a fraction $\chi$ at each
+  change of government, a piecewise-deterministic Markov process with expected long-run level $K^* = u/(\delta
+  + \lambda\chi)$. The democratic disadvantage depends on the product $\lambda\chi$ of turnover rate and
+  reset severity, which we call the reset tax. In an illustrative calibration with 4-year governments,
+  cutting $\chi$ from 0.8 to 0.1 raises a democracy''s long-run capacity from 0.22 to 0.73 of an autocracy''s,
+  removes about 90 percent of the excess gap, and lowers the coefficient of variation from 0.69 to 0.13,
+  with turnover unchanged. The longest financeable reform horizon rises from 5.5 to 18.5 years, and the
+  benefit-to-cost ratio a 15-year reform must clear falls from 42.5 to 3.1. Because institutions are built
+  slowly and destroyed quickly, alternation between capturing and repairing governments drifts to breakdown
+  when destruction outpaces repair; with a median threefold asymmetry, 83 percent of simulated episodes
+  break down, and faster repair or earlier resistance lowers this to 33 or 15 percent. Matching the low-reset
+  continuity by longer tenure would require 32-year leaders. The model calibrates no country and assumes
+  throughout that leaders remain removable.'
+web_blurb: A democracy's strategic disadvantage against an autocracy depends on turnover multiplied by
+  the share of capacity lost at each handover. Cutting that loss, with elections unchanged, recovers most
+  autocratic continuity; longer tenure would need 32-year leaders.
