@@ -1,0 +1,195 @@
+[
+ {
+  "id": "acemoglu2019",
+  "families": [
+   "Acemoglu",
+   "Robinson"
+  ],
+  "authors_text": "Acemoglu, D., and Robinson, J. A.",
+  "year": "2019",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "alesina1990",
+  "families": [
+   "Alesina",
+   "Tabellini"
+  ],
+  "authors_text": "Alesina, A., and Tabellini, G.",
+  "year": "1990",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "aubin1991",
+  "families": [
+   "Aubin"
+  ],
+  "authors_text": "Aubin, J.-P.",
+  "year": "1991",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "basic1949",
+  "families": [
+   "Basic Law for the Federal Republic of Germany"
+  ],
+  "authors_text": "Basic Law for the Federal Republic of Germany",
+  "year": "1949",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "bermeo2016",
+  "families": [
+   "Bermeo"
+  ],
+  "authors_text": "Bermeo, N.",
+  "year": "2016",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "besley2009",
+  "families": [
+   "Besley",
+   "Persson"
+  ],
+  "authors_text": "Besley, T., and Persson, T.",
+  "year": "2009",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "besley2011",
+  "families": [
+   "Besley",
+   "Persson"
+  ],
+  "authors_text": "Besley, T., and Persson, T.",
+  "year": "2011",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "boese2021",
+  "families": [
+   "Boese",
+   "Edgell",
+   "Hellmeier",
+   "Maerz",
+   "Lindberg"
+  ],
+  "authors_text": "Boese, V. A., Edgell, A. B., Hellmeier, S., Maerz, S. F., and Lindberg, S. I.",
+  "year": "2021",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "fearon2011",
+  "families": [
+   "Fearon"
+  ],
+  "authors_text": "Fearon, J. D.",
+  "year": "2011",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "ginsburg2018",
+  "families": [
+   "Ginsburg",
+   "Huq"
+  ],
+  "authors_text": "Ginsburg, T., and Huq, A. Z.",
+  "year": "2018",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "guedesneto2025",
+  "families": [
+   "Guedes-Neto",
+   "Peters"
+  ],
+  "authors_text": "Guedes-Neto, J. V., and Peters, B. G.",
+  "year": "2025",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "international2023",
+  "families": [
+   "International IDEA."
+  ],
+  "authors_text": "International IDEA.",
+  "year": "2023",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "levitsky2018",
+  "families": [
+   "Levitsky",
+   "Ziblatt"
+  ],
+  "authors_text": "Levitsky, S., and Ziblatt, D.",
+  "year": "2018",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "maeda2010",
+  "families": [
+   "Maeda"
+  ],
+  "authors_text": "Maeda, K.",
+  "year": "2010",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "osce1994",
+  "families": [
+   "OSCE."
+  ],
+  "authors_text": "OSCE.",
+  "year": "1994",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "ostrom1990",
+  "families": [
+   "Ostrom"
+  ],
+  "authors_text": "Ostrom, E.",
+  "year": "1990",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "ostrom1961",
+  "families": [
+   "Ostrom",
+   "Tiebout",
+   "Warren"
+  ],
+  "authors_text": "Ostrom, V., Tiebout, C. M., and Warren, R.",
+  "year": "1961",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "przeworski2010",
+  "families": [
+   "Przeworski"
+  ],
+  "authors_text": "Przeworski, A.",
+  "year": "2010",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "vdem2026",
+  "families": [
+   "V-Dem Institute."
+  ],
+  "authors_text": "V-Dem Institute.",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "venice2002",
+  "families": [
+   "Venice Commission."
+  ],
+  "authors_text": "Venice Commission.",
+  "year": "2002",
+  "status": "UNVERIFIED"
+ }
+]

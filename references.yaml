@@ -1,0 +1,282 @@
+# CSL references with stable IDs; cite with Pandoc [@id] syntax.
+# Migrated from the legacy inline bibliography. Entries with a DOI were resolved through doi.org
+# content negotiation (CSL-JSON) and checked for year and title; others were matched in Crossref
+# or entered by hand. Provenance per entry is in sources.md.
+references:
+- type: book
+  title: 'The Narrow Corridor: States, Societies, and the Fate of Liberty'
+  author:
+  - family: Acemoglu
+    given: Daron
+  - family: Robinson
+    given: James A.
+  publisher: Penguin Press
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2019
+  id: acemoglu2019
+- id: alesina1990
+  type: article-journal
+  title: A Positive Theory of Fiscal Deficits and Government Debt
+  author:
+  - given: Alberto
+    family: Alesina
+  - given: Guido
+    family: Tabellini
+  container-title: The Review of Economic Studies
+  volume: '57'
+  issue: '3'
+  page: 403-414
+  DOI: 10.2307/2298021
+  issued:
+    date-parts:
+    - - 1990
+- type: book
+  title: Viability Theory
+  author:
+  - family: Aubin
+    given: Jean-Pierre
+  publisher: Birkhäuser
+  publisher-place: Boston
+  issued:
+    date-parts:
+    - - 1991
+  id: aubin1991
+- id: basiclaw1949
+  type: legislation
+  title: Basic Law for the Federal Republic of Germany
+  URL: https://www.gesetze-im-internet.de/englisch_gg/englisch_gg.html
+  issued:
+    date-parts:
+    - - 1949
+  title-short: Basic Law
+  publisher-place: Bonn
+- id: bermeo2016
+  type: article-journal
+  title: On Democratic Backsliding
+  author:
+  - given: Nancy
+    family: Bermeo
+  container-title: Journal of Democracy
+  volume: '27'
+  issue: '1'
+  page: 5-19
+  DOI: 10.1353/jod.2016.0012
+  issued:
+    date-parts:
+    - - 2016
+- id: besley2009
+  type: article-journal
+  title: 'The Origins of State Capacity: Property Rights, Taxation, and Politics'
+  author:
+  - given: Timothy
+    family: Besley
+  - given: Torsten
+    family: Persson
+  container-title: American Economic Review
+  volume: '99'
+  issue: '4'
+  page: 1218-1244
+  DOI: 10.1257/aer.99.4.1218
+  issued:
+    date-parts:
+    - - 2009
+- type: book
+  title: 'Pillars of Prosperity: The Political Economics of Development Clusters'
+  author:
+  - family: Besley
+    given: Timothy
+  - family: Persson
+    given: Torsten
+  publisher: Princeton University Press
+  publisher-place: Princeton
+  issued:
+    date-parts:
+    - - 2011
+  id: besley2011
+- id: boese2021
+  type: article-journal
+  title: 'How democracies prevail: democratic resilience as a two-stage process'
+  author:
+  - given: Vanessa A.
+    family: Boese
+  - given: Amanda B.
+    family: Edgell
+  - given: Sebastian
+    family: Hellmeier
+  - given: Seraphine F.
+    family: Maerz
+  - given: Staffan I.
+    family: Lindberg
+  container-title: Democratization
+  volume: '28'
+  issue: '5'
+  page: 885-907
+  DOI: 10.1080/13510347.2021.1891413
+  issued:
+    date-parts:
+    - - 2021
+- id: fearon2011
+  type: article-journal
+  title: Self-Enforcing Democracy
+  author:
+  - given: J. D.
+    family: Fearon
+  container-title: The Quarterly Journal of Economics
+  volume: '126'
+  issue: '4'
+  page: 1661-1708
+  DOI: 10.1093/qje/qjr038
+  issued:
+    date-parts:
+    - - 2011
+- type: book
+  title: How to Save a Constitutional Democracy
+  author:
+  - family: Ginsburg
+    given: Tom
+  - family: Huq
+    given: Aziz Z.
+  publisher: University of Chicago Press
+  publisher-place: Chicago
+  DOI: 10.7208/chicago/9780226564418.001.0001
+  issued:
+    date-parts:
+    - - 2018
+  id: ginsburg2018
+- id: guedesneto2025
+  type: book
+  title: Bureaucratic Resistance in Times of Democratic Backsliding
+  author:
+  - given: João V.
+    family: Guedes-Neto
+  - given: B. Guy
+    family: Peters
+  publisher: Cambridge University Press
+  DOI: 10.1017/9781009437479
+  issued:
+    date-parts:
+    - - 2025
+- id: bisarya2023
+  type: report
+  title: 'Designing Resistance: Democratic Institutions and the Threat of Backsliding'
+  author:
+  - family: Bisarya
+    given: Sumit
+  - family: Rogers
+    given: Madeleine
+  publisher: International Institute for Democracy and Electoral Assistance
+  publisher-place: Stockholm
+  DOI: 10.31752/idea.2023.76
+  issued:
+    date-parts:
+    - - 2023
+- type: book
+  title: How Democracies Die
+  author:
+  - family: Levitsky
+    given: Steven
+  - family: Ziblatt
+    given: Daniel
+  publisher: Crown
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2018
+  id: levitsky2018
+- id: maeda2010
+  type: article-journal
+  title: 'Two Modes of Democratic Breakdown: A Competing Risks Analysis of Democratic Durability'
+  author:
+  - given: Ko
+    family: Maeda
+  container-title: The Journal of Politics
+  volume: '72'
+  issue: '4'
+  page: 1129-1143
+  DOI: 10.1017/s0022381610000575
+  issued:
+    date-parts:
+    - - 2010
+- type: report
+  title: Code of Conduct on Politico-Military Aspects of Security
+  author:
+  - literal: OSCE
+  publisher: OSCE
+  publisher-place: Budapest
+  number: DOC.FSC/1/95
+  URL: https://www.osce.org/fsc/41355
+  issued:
+    date-parts:
+    - - 1994
+  id: osce1994
+- type: book
+  title: 'Governing the Commons: The Evolution of Institutions for Collective Action'
+  author:
+  - family: Ostrom
+    given: Elinor
+  publisher: Cambridge University Press
+  publisher-place: Cambridge
+  DOI: 10.1017/CBO9780511807763
+  issued:
+    date-parts:
+    - - 1990
+  id: ostrom1990
+- id: ostrom1961
+  type: article-journal
+  title: 'The Organization of Government in Metropolitan Areas: A Theoretical Inquiry'
+  author:
+  - given: Vincent
+    family: Ostrom
+  - given: Charles M.
+    family: Tiebout
+  - given: Robert
+    family: Warren
+  container-title: American Political Science Review
+  volume: '55'
+  issue: '4'
+  page: 831-842
+  DOI: 10.2307/1952530
+  issued:
+    date-parts:
+    - - 1961
+- id: przeworski2010
+  type: book
+  title: Democracy and the Limits of Self-Government
+  author:
+  - given: Adam
+    family: Przeworski
+  publisher: Cambridge University Press
+  DOI: 10.1017/cbo9780511778490
+  issued:
+    date-parts:
+    - - 2010
+- type: report
+  title: 'Democracy Report 2026: Unraveling the Democratic Era?'
+  author:
+  - family: Good God
+    given: Ana
+  - family: Nord
+    given: Marina
+  - family: Lindberg
+    given: Staffan I.
+  publisher: V-Dem Institute, University of Gothenburg
+  publisher-place: Gothenburg
+  URL: https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf
+  issued:
+    date-parts:
+    - - 2026
+  id: vdem2026
+- type: report
+  title: 'Code of Good Practice in Electoral Matters: Guidelines and Explanatory Report'
+  author:
+  - literal: Venice Commission
+  publisher: Council of Europe
+  publisher-place: Strasbourg
+  number: CDL-AD(2002)023rev
+  URL: https://www.venice.coe.int/webforms/documents/?pdf=CDL-AD(2002)023rev2-cor-e
+  issued:
+    date-parts:
+    - - 2002
+  id: venice2002

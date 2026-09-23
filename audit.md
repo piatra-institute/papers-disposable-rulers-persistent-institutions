@@ -3,6 +3,17 @@
 Dated log of editorial passes and verification runs. Newest first.
 See the workspace docs (run `papers docs`): writing-pipeline.md §7 and refresh-pipeline.md.
 
+## 2026-09-23 — structured-evidence migration
+
+Structured-evidence migration (references and claims).
+- references.yaml: 20 CSL entries. 10 matched through Crossref and checked for year and title (alesina1990, bermeo2016, besley2009, boese2021, fearon2011, guedesneto2025, maeda2010, ostrom1961, przeworski2010, bisarya2023); 10 completed by hand (acemoglu2019, aubin1991, basiclaw1949, besley2011, ginsburg2018, levitsky2018, osce1994, ostrom1990, vdem2026, venice2002). In-text author-year citations converted to Pandoc [@id] syntax; the Basic Law citation is now [@basiclaw1949, art. 67]; the legacy list replaced by the citeproc-rendered list (Chicago author-date). Alesina and Tabellini page range completed (403-414).
+- Correction: international2023 -> bisarya2023. The DOI record (10.31752/idea.2023.76) names Sumit Bisarya and Madeleine Rogers as authors of Designing Resistance; the citation renders as (Bisarya and Rogers 2023) in place of (International IDEA, 2023).
+- vdem2026: authors Ana Good God, Marina Nord and Staffan I. Lindberg from v-dem.net; the citation renders as (Good God et al. 2026). The 44 autocratizing countries and 41 percent of world population were confirmed in the report's key findings.
+- claims.yaml: 59 claims (44 computation, 6 source, 2 definition, 4 assumption, 2 interpretation, 1 normative). Every modelled number in the abstract and Sections 3.1-3.4 and the conclusion is bound to simulation/output/results.json under run id model; the breakdown shares are bound to the closed-form values (83, 33, 15), with the Monte Carlo 83.3 bound separately. "About 5 times steadier" is bound as an interpretation (ratio of the two bound coefficients of variation, 5.2). Source claims checked: vdem2026 (report text), boese2021, bermeo2016, besley2009, alesina1990, fearon2011 (abstracts via Crossref or OpenAlex).
+- Unverified, not bound: the Guedes-Neto and Peters and Besley and Persson (2011) support for slow rebuilding of competence (the Element's abstract concerns bureaucratic resistance, not rebuild times); Maeda (2010) as support for the low recovery rate; the Ostrom and Tiebout-Warren polycentricity point; Acemoglu and Robinson's narrow corridor; Aubin's viability kernel; the Venice Commission and OSCE instruments (documents located, content not re-read).
+- Run: model (uv run python run_all.py, seed 20260621); results.json and the three figures reproduced byte for byte.
+- metadata claims_target: claim-ledger.
+
 ## 2026-09-23 — prose revision
 
 Prose rewritten against the house standards. Headings: 1. Introduction; 2. Model; 3. Results (3.1 Long-run capacity and volatility; 3.2 Financeable reform horizon; 3.3 Drift of institutional integrity under alternation; 3.4 Tenure and reset as routes to continuity); 4. Institutional instruments; 5. Limitations; 6. Conclusion; Reproducibility (new). Tics: "rather than" 8 -> 0, inline ", not X" 5 -> 0, negate-pivots 2 -> 0, "not X but Y" 3 -> 0, "this/the paper" 3 -> 0, "merely/simply" 6 -> 0. Reference to "the seed's own worked example" removed.

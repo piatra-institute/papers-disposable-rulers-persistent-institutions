@@ -1,0 +1,671 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: feb3c71761b2cab9081eaf52ef287a47498d275322bf5a26c48af8cdf77bb379
+claims:
+- id: abs-ratio-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/ratio_high
+    reported: '0.22'
+    decimals: 2
+    units: capacity relative to autocracy
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: In an illustrative calibration with 4-year governments, cutting $\chi$ from 0.8 to 0.1 raises
+    a democracy's long-run capacity from 0.22 to 0.73 of an autocracy's, removes about 90 percent of the
+    excess gap, and lowers the coefficient of variation from 0.69 to 0.13, with turnover unchanged.
+- id: abs-ratio-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/ratio_low
+    reported: '0.73'
+    decimals: 2
+    units: capacity relative to autocracy
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: In an illustrative calibration with 4-year governments, cutting $\chi$ from 0.8 to 0.1 raises
+    a democracy's long-run capacity from 0.22 to 0.73 of an autocracy's, removes about 90 percent of the
+    excess gap, and lowers the coefficient of variation from 0.69 to 0.13, with turnover unchanged.
+- id: abs-gap-removed
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/gap_removed
+    reported: '90'
+    decimals: 0
+    units: percent of excess gap removed
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+    scale: 100
+  passage: In an illustrative calibration with 4-year governments, cutting $\chi$ from 0.8 to 0.1 raises
+    a democracy's long-run capacity from 0.22 to 0.73 of an autocracy's, removes about 90 percent of the
+    excess gap, and lowers the coefficient of variation from 0.69 to 0.13, with turnover unchanged.
+- id: abs-cv-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/cv_high
+    reported: '0.69'
+    decimals: 2
+    units: coefficient of variation
+    conditions: Monte Carlo, 20,000 paths over 400 years, chi = 0.8
+  passage: In an illustrative calibration with 4-year governments, cutting $\chi$ from 0.8 to 0.1 raises
+    a democracy's long-run capacity from 0.22 to 0.73 of an autocracy's, removes about 90 percent of the
+    excess gap, and lowers the coefficient of variation from 0.69 to 0.13, with turnover unchanged.
+- id: abs-cv-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/cv_low
+    reported: '0.13'
+    decimals: 2
+    units: coefficient of variation
+    conditions: Monte Carlo, 20,000 paths over 400 years, chi = 0.1
+  passage: In an illustrative calibration with 4-year governments, cutting $\chi$ from 0.8 to 0.1 raises
+    a democracy's long-run capacity from 0.22 to 0.73 of an autocracy's, removes about 90 percent of the
+    excess gap, and lowers the coefficient of variation from 0.69 to 0.13, with turnover unchanged.
+- id: abs-tau-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/tau_high
+    reported: '5.5'
+    decimals: 1
+    units: years
+    conditions: benefit-to-cost ratio 4
+  passage: The longest financeable reform horizon rises from 5.5 to 18.5 years, and the benefit-to-cost
+    ratio a 15-year reform must clear falls from 42.5 to 3.1.
+- id: abs-tau-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/tau_low
+    reported: '18.5'
+    decimals: 1
+    units: years
+    conditions: benefit-to-cost ratio 4
+  passage: The longest financeable reform horizon rises from 5.5 to 18.5 years, and the benefit-to-cost
+    ratio a 15-year reform must clear falls from 42.5 to 3.1.
+- id: abs-req-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/req_mult_high
+    reported: '42.5'
+    decimals: 1
+    units: required benefit-to-cost ratio
+    conditions: 15-year reform
+  passage: The longest financeable reform horizon rises from 5.5 to 18.5 years, and the benefit-to-cost
+    ratio a 15-year reform must clear falls from 42.5 to 3.1.
+- id: abs-req-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/req_mult_low
+    reported: '3.1'
+    decimals: 1
+    units: required benefit-to-cost ratio
+    conditions: 15-year reform
+  passage: The longest financeable reform horizon rises from 5.5 to 18.5 years, and the benefit-to-cost
+    ratio a 15-year reform must clear falls from 42.5 to 3.1.
+- id: abs-breakdown
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/breakdown_frac_exact
+    reported: '83'
+    decimals: 0
+    units: percent of episodes breaking down
+    conditions: log-normal destroy-to-build ratios, median 3, log-sd 0.5, capture share 0.35; closed form
+    scale: 100
+  passage: Because institutions are built slowly and destroyed quickly, alternation between capturing
+    and repairing governments drifts to breakdown when destruction outpaces repair; with a median threefold
+    asymmetry, 83 percent of simulated episodes break down, and faster repair or earlier resistance lowers
+    this to 33 or 15 percent.
+- id: abs-breakdown-repair
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/breakdown_protected_exact
+    reported: '33'
+    decimals: 0
+    units: percent of episodes breaking down
+    conditions: median ratio 1.5; closed form
+    scale: 100
+  passage: Because institutions are built slowly and destroyed quickly, alternation between capturing
+    and repairing governments drifts to breakdown when destruction outpaces repair; with a median threefold
+    asymmetry, 83 percent of simulated episodes break down, and faster repair or earlier resistance lowers
+    this to 33 or 15 percent.
+- id: abs-breakdown-early
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/breakdown_early_exact
+    reported: '15'
+    decimals: 0
+    units: percent of episodes breaking down
+    conditions: capture share one sixth; closed form
+    scale: 100
+  passage: Because institutions are built slowly and destroyed quickly, alternation between capturing
+    and repairing governments drifts to breakdown when destruction outpaces repair; with a median threefold
+    asymmetry, 83 percent of simulated episodes break down, and faster repair or earlier resistance lowers
+    this to 33 or 15 percent.
+- id: abs-tenure
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /two_clocks/tenure_needed
+    reported: '32'
+    decimals: 0
+    units: years of leader tenure
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: Matching the low-reset continuity by longer tenure would require 32-year leaders.
+- id: decay-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/regimes/high-reset democracy/eff_decay
+    reported: '0.25'
+    decimals: 2
+    units: per year
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The effective decay rates are 0.25 for the democracy and 0.055 for the autocracy, and with
+    equal annual investment the democracy holds 0.22 of the autocracy's long-run capacity.
+- id: decay-auto
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/regimes/autocracy/eff_decay
+    reported: '0.055'
+    decimals: 3
+    units: per year
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The effective decay rates are 0.25 for the democracy and 0.055 for the autocracy, and with
+    equal annual investment the democracy holds 0.22 of the autocracy's long-run capacity.
+- id: ratio-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/ratio_high
+    reported: '0.22'
+    decimals: 2
+    units: capacity relative to autocracy
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The effective decay rates are 0.25 for the democracy and 0.055 for the autocracy, and with
+    equal annual investment the democracy holds 0.22 of the autocracy's long-run capacity.
+- id: deficit-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/deficit_high
+    reported: '4.5'
+    decimals: 1
+    units: autocracy capacity over democracy capacity
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The autocracy is about 4.5 times ahead.
+- id: decay-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/regimes/low-reset democracy/eff_decay
+    reported: '0.075'
+    decimals: 3
+    units: per year
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: Holding elections equally frequent ($\lambda = 0.25$) and lowering the reset from $\chi = 0.8$
+    to $\chi = 0.1$, by the administrative means listed in Section 4, reduces the democratic effective
+    decay to 0.075.
+- id: ratio-rise-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/ratio_high
+    reported: '0.22'
+    decimals: 2
+    units: capacity relative to autocracy
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The capacity ratio rises from 0.22 to 0.73, and the autocracy's advantage falls from 4.5-fold
+    to 1.36-fold.
+- id: ratio-rise-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/ratio_low
+    reported: '0.73'
+    decimals: 2
+    units: capacity relative to autocracy
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The capacity ratio rises from 0.22 to 0.73, and the autocracy's advantage falls from 4.5-fold
+    to 1.36-fold.
+- id: deficit-fall-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/deficit_high
+    reported: '4.5'
+    decimals: 1
+    units: fold advantage
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The capacity ratio rises from 0.22 to 0.73, and the autocracy's advantage falls from 4.5-fold
+    to 1.36-fold.
+- id: deficit-fall-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/deficit_low
+    reported: '1.36'
+    decimals: 2
+    units: fold advantage
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The capacity ratio rises from 0.22 to 0.73, and the autocracy's advantage falls from 4.5-fold
+    to 1.36-fold.
+- id: gap-removed
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/gap_removed
+    reported: '90'
+    decimals: 0
+    units: percent
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+    scale: 100
+  passage: About 90 percent of the excess gap above parity is removed, and no politician has become harder
+    to remove.
+- id: mc-error
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/mc/high-reset democracy/rel_err_mean
+    reported: '0.4'
+    decimals: 1
+    units: percent relative error of the Monte Carlo mean (largest of the three regimes)
+    conditions: 20,000 paths over 400 years
+    scale: 100
+  passage: Direct simulation of 20,000 sample paths over 400 years reproduces the analytic means to within
+    0.4 percent and measures the spread.
+- id: cv-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/cv_high
+    reported: '0.69'
+    decimals: 2
+    units: coefficient of variation
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The coefficient of variation falls from 0.69 at $\chi = 0.8$ to 0.13 at $\chi = 0.1$, so a
+    low-reset democracy is about 5 times steadier.
+- id: cv-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/cv_low
+    reported: '0.13'
+    decimals: 2
+    units: coefficient of variation
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The coefficient of variation falls from 0.69 at $\chi = 0.8$ to 0.13 at $\chi = 0.1$, so a
+    low-reset democracy is about 5 times steadier.
+- id: lamchi-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/regimes/high-reset democracy/reset_tax
+    reported: '0.2'
+    decimals: 1
+    units: lambda times chi
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The high-reset democracy lies at $\lambda\chi = 0.2$ and the autocracy at $\lambda\chi = 0.005$.
+- id: lamchi-auto
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reset_tax/regimes/autocracy/reset_tax
+    reported: '0.005'
+    decimals: 3
+    units: lambda times chi
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The high-reset democracy lies at $\lambda\chi = 0.2$ and the autocracy at $\lambda\chi = 0.005$.
+- id: tau-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/tau_high
+    reported: '5.5'
+    decimals: 1
+    units: years
+    conditions: benefit-to-cost ratio 4, rho = 0.05
+  passage: For a reform whose eventual benefit is 4 times its cost, with $\rho = 0.05$, the high-reset
+    democracy can finance projects out to $\tau^* = 5.5$ years.
+- id: tau-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/tau_low
+    reported: '18.5'
+    decimals: 1
+    units: years
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: With $\chi = 0.1$ the financeable horizon extends to 18.5 years, a factor of 3.3, and the autocracy
+    can plan 25.2 years ahead.
+- id: tau-gain
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/horizon_gain
+    reported: '3.3'
+    decimals: 1
+    units: ratio of horizons
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: With $\chi = 0.1$ the financeable horizon extends to 18.5 years, a factor of 3.3, and the autocracy
+    can plan 25.2 years ahead.
+- id: tau-auto
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/tau_auto
+    reported: '25.2'
+    decimals: 1
+    units: years
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: With $\chi = 0.1$ the financeable horizon extends to 18.5 years, a factor of 3.3, and the autocracy
+    can plan 25.2 years ahead.
+- id: req-high
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/req_mult_high
+    reported: '42.5'
+    decimals: 1
+    units: required benefit-to-cost ratio
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: For a fixed 15-year mission, the high-reset democracy requires the benefit to exceed the cost
+    42.5-fold, a threshold few real projects clear.
+- id: req-low
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/req_mult_low
+    reported: '3.1'
+    decimals: 1
+    units: required benefit-to-cost ratio
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The low-reset democracy requires a 3.1-fold payoff and the autocracy a 2.28-fold one.
+- id: req-auto
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /horizon/req_mult_auto
+    reported: '2.28'
+    decimals: 2
+    units: required benefit-to-cost ratio
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: The low-reset democracy requires a 3.1-fold payoff and the autocracy a 2.28-fold one.
+- id: crit-ratio
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/crit_ratio
+    reported: '1.86'
+    decimals: 2
+    units: destroy-to-build ratio
+    conditions: capture share 0.35
+  passage: With capture in office for a minority share $\phi = 0.35$ of the time, the system tolerates
+    a destroy-to-build ratio of at most 1.86, and plausible empirical asymmetries exceed that.
+- id: breakdown-exact
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/breakdown_frac_exact
+    reported: '83.1'
+    decimals: 1
+    units: percent
+    conditions: closed form
+    scale: 100
+  passage: For a population of episodes with log-normally distributed destroy-to-build ratios (median
+    3, log-standard deviation 0.5), classified by the sign of their net drift, 83 percent drift to breakdown
+    (closed form 83.1 percent; Monte Carlo over 40,000 draws 83.3 percent).
+- id: breakdown-mc
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/breakdown_frac
+    reported: '83.3'
+    decimals: 1
+    units: percent
+    conditions: Monte Carlo over 40,000 draws
+    scale: 100
+  passage: For a population of episodes with log-normally distributed destroy-to-build ratios (median
+    3, log-standard deviation 0.5), classified by the sign of their net drift, 83 percent drift to breakdown
+    (closed form 83.1 percent; Monte Carlo over 40,000 draws 83.3 percent).
+- id: breakdown-repair
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/breakdown_protected_exact
+    reported: '33'
+    decimals: 0
+    units: percent
+    conditions: median ratio 1.5; closed form
+    scale: 100
+  passage: Halving the median asymmetry to 1.5 lowers the breakdown share from 83 to 33 percent.
+- id: breakdown-early
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /drift/breakdown_early_exact
+    reported: '15'
+    decimals: 0
+    units: percent
+    conditions: capture share one sixth; closed form
+    scale: 100
+  passage: Shorter capture episodes reduce $\phi$, which supports resistance in the first electoral cycle,
+    before the courts are packed; reducing the capture share to one sixth lowers the breakdown share to
+    15 percent.
+- id: tenure-needed
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /two_clocks/tenure_needed
+    reported: '32'
+    decimals: 0
+    units: years
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: Reaching the effective decay of the low-reset democracy then requires each leader to serve
+    32 years, longer than the 20-year autocratic tenure in the calibration.
+- id: reset-route-cap
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /two_clocks/cap_ratio
+    reported: '73'
+    decimals: 0
+    units: percent of autocratic capacity
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+    scale: 100
+  passage: A democracy that keeps 4-year leaders and cuts $\chi$ to 0.1 reaches 73 percent of an autocracy's
+    long-run capacity while replacing its governments 5 times as often.
+- id: reset-route-gain
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /two_clocks/removability_gain
+    reported: '5'
+    decimals: 0
+    units: ratio of turnover rates
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+  passage: A democracy that keeps 4-year leaders and cuts $\chi$ to 0.1 reaches 73 percent of an autocracy's
+    long-run capacity while replacing its governments 5 times as often.
+- id: conclusion-cap
+  kind: computation
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /two_clocks/cap_ratio
+    reported: '73'
+    decimals: 0
+    units: percent of autocratic capacity
+    conditions: illustrative calibration of Section 3.1 (u = 1, delta = 0.05, rho = 0.05); seed 20260621
+    scale: 100
+  passage: In the calibration, this route recovers 73 percent of autocratic capacity while replacing governments
+    five times as often.
+- id: vdem-44
+  kind: source
+  evidence:
+    citation_id: vdem2026
+    locator: Key findings
+    verified: true
+    verification_note: 'Report PDF retrieved from v-dem.net: "Nearly a quarter of the worlds nations are
+      now on the list of autocratizers: 44 countries" and "A record of 41% (3.4 billion) of the world
+      population currently reside in autocratizing countries."'
+  passage: The V-Dem Institute's 2026 report counts 44 countries, holding about 41 percent of the world's
+    population, in some phase of autocratization, and earlier work on the same data found that once autocratization
+    begins inside a democracy, only about one in five democracies recover [@vdem2026; @boese2021].
+- id: boese-one-in-five
+  kind: source
+  evidence:
+    citation_id: boese2021
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1080/13510347.2021.1891413; abstract (OpenAlex): once autocratization begins,
+      only one in five democracies manage to avert breakdown.'
+  passage: The V-Dem Institute's 2026 report counts 44 countries, holding about 41 percent of the world's
+    population, in some phase of autocratization, and earlier work on the same data found that once autocratization
+    begins inside a democracy, only about one in five democracies recover [@vdem2026; @boese2021].
+- id: bermeo-aggrandizement
+  kind: source
+  evidence:
+    citation_id: bermeo2016
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1353/jod.2016.0012; Crossref abstract: executive aggrandizement and strategic
+      electoral manipulation are increasing while open-ended coups decline.'
+  passage: The usual mode of attack is executive aggrandizement, the incremental and legalistic capture
+    of the referees, proceeding in steps each too small to trigger a response [@bermeo2016; @levitsky2018;
+    @ginsburg2018].
+- id: besley-capacity
+  kind: source
+  evidence:
+    citation_id: besley2009
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1257/aer.99.4.1218; Crossref abstract: policy is constrained by past investments
+      in legal and fiscal capacity, with political stability conducive to building it.'
+  passage: The state-capacity literature treats capacity as a forward-looking investment whose value depends
+    on who will hold power next [@besley2009; @besley2011]; the reset tax describes that investment when
+    the holder changes on a schedule and the handover loses part of it.
+- id: alesina-successors
+  kind: source
+  evidence:
+    citation_id: alesina1990
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.2307/2298021; abstract (OpenAlex): alternating policymakers use debt strategically
+      to influence the choices of their successors.'
+  passage: A successor-only rule, under which a majority that changes the rules of competition cannot
+    itself benefit from the change, removes the immediate payoff from constitutional self-dealing, the
+    means by which a strategic incumbent binds its successors [@alesina1990; @venice2002].
+- id: fearon-signal
+  kind: source
+  evidence:
+    citation_id: fearon2011
+    locator: Abstract
+    verified: true
+    verification_note: 'DOI 10.1093/qje/qjr038; abstract (OpenAlex): elections provide a public signal
+      for coordinating rebellion, and a party system in which today''''s losers may win in the future
+      restores self-enforcing democracy.'
+  passage: Democracy is self-enforcing only while the losers of an election expect to compete again, and
+    the public, common-knowledge signal an election provides lets citizens coordinate to defend it [@fearon2011;
+    @przeworski2010].
+- id: reset-tax-def
+  kind: definition
+  rationale: Names the central quantity lambda times chi, which follows from the expected-value equation
+    in Section 2.
+  passage: The democratic disadvantage depends on the product $\lambda\chi$ of turnover rate and reset
+    severity, which we call the reset tax.
+- id: capacity-def
+  kind: definition
+  rationale: Defines the modelled stock; the written constitution is excluded.
+  passage: 'Let $K_t$ be a state''s strategic capacity at time $t$: its working stock of expertise, institutional
+    memory, live alliances, administrative routine and reform progress, the resources that let it pursue
+    goals longer than one term.'
+- id: pdmp-assumption
+  kind: assumption
+  rationale: Poisson turnover and a fixed multiplicative loss per turnover; the steady-state formula depends
+    on both.
+  passage: If turnovers arrive as a Poisson process $N_t$ with rate $\lambda$, the dynamics are
+- id: calibration-assumption
+  kind: assumption
+  rationale: All numerical results are conditional on the stated illustrative parameters; no country is
+    calibrated.
+  passage: The calibration is illustrative.
+- id: median-stipulated
+  kind: assumption
+  rationale: The destroy-to-build distribution is stipulated; the 83 percent figure follows from it and
+    does not reproduce the empirical breakdown rate.
+  passage: The median ratio of 3 is stipulated to display the mechanism, and a different choice would
+    move the breakdown share.
+- id: steadier
+  kind: interpretation
+  rationale: Ratio of the two bound coefficients of variation (0.686/0.131 = 5.2), stated as about 5.
+  passage: The coefficient of variation falls from 0.69 at $\chi = 0.8$ to 0.13 at $\chi = 0.1$, so a
+    low-reset democracy is about 5 times steadier.
+- id: design-target
+  kind: normative
+  rationale: 'Normative conclusion: lambda carries accountability and chi has no democratic function,
+    so the recommended lever is chi.'
+  passage: 'The design target follows: keep $\lambda$ high and reduce $\chi$.'
+- id: entrenchment-worse
+  kind: interpretation
+  rationale: Follows from the 32-year tenure requirement exceeding the 20-year autocratic tenure in the
+    calibration.
+  passage: Entrenchment is therefore quantitatively worse than the problem it addresses.
+- id: removability-condition
+  kind: assumption
+  rationale: The model assumes leaders stay removable; a design that lowers lambda falls outside the argument.
+  passage: The argument is conditional on $\lambda$ remaining high and on leaders remaining removable.
+runs:
+- id: model
+  required: true
+  record: verification/model.json
